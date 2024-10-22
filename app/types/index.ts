@@ -14,12 +14,12 @@ export type TodoItems = {
   name: string
 }
 
-export type ItemColumnProps = {
-  dataList: TodoItems[]
-  // dataList: ItemColumnData,
-  action: (parameters: TodoItems) => void;
+export interface MapIdTodoItems extends TodoItems {
+  id: number,
+  isSelected: boolean
 }
 
-// export interface ItemColumnData extends TodoItems {
-//   id: number
-// }
+export type ItemColumnProps = {
+  dataList: MapIdTodoItems[]
+  action: (parameters: MapIdTodoItems) => void;
+}
