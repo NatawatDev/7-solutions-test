@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+// import React, { useState, useEffect } from 'react'
 
-const tranformdata = async() => {
-  const [userData, setUserData] = useState([])
+const tranformdata = () => {
+  // const [userData, setUserData] = useState([])
 
-  const response = await fetch('https://dummyjson.com/users')
-  let result = response.json
+  // const response = await fetch('https://dummyjson.com/users')
+  // let result = response.json
   // console.log(result);
   // const fetchUserData = async () => {
   //   try {
@@ -24,6 +24,7 @@ const tranformdata = async() => {
 
   return (
     <div>
+      tranformdata
     </div>
   )
 }
