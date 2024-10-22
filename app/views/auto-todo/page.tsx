@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { TodoItems, MapIdTodoItems } from '../../types'
 import ItemColumn from '../../components/ItemColumn'
 
-const autoTodoPage = () => {
+const AutoTodoPage = () => {
   
-  const todoItems:TodoItems[]  = [
+  const todoItems:TodoItems[] = useMemo(() => [
     { type: 'Fruit', name: 'Apple' },
     { type: 'Vegetable', name: 'Broccoli' },
     { type: 'Vegetable', name: 'Mushroom' },
@@ -18,7 +18,7 @@ const autoTodoPage = () => {
     { type: 'Vegetable', name: 'Cucumber' },
     { type: 'Fruit', name: 'Watermelon' },
     { type: 'Vegetable', name: 'Carrot' },
-  ]
+  ], []) 
   const [itemList, setItemList] = useState<MapIdTodoItems[]>([])
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const autoTodoPage = () => {
       return { ...item, id: index + 1, isSelected: false }
     })
     setItemList(newTodoItem)
-  },[])
+  }, [todoItems])
 
   const handleClick = (selectedValue: MapIdTodoItems, isSelected: boolean):void => {
     const selectedIndex = itemList.findIndex((item) => item.id === selectedValue.id)
@@ -65,4 +65,4 @@ const autoTodoPage = () => {
   )
 }
 
-export default autoTodoPage
+export default AutoTodoPage
