@@ -24,8 +24,9 @@ const Transformdata = () => {
 
   return (
     <div>
-      <h1>User Data</h1>
-      <pre>{JSON.stringify(userData, null, 2)}</pre>
+      {Object.keys(userData).length > 0 && (
+        <pre>{JSON.stringify(userData, null, 2)}</pre>
+      )}      
     </div>
   );
 }
