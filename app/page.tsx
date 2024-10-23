@@ -7,7 +7,7 @@ import { useRouter  } from "next/navigation";
 export default function Home() {
   const taskButton: TaskButton[] = [
     { title: 'Auto Delete Todo List', path: '/auto-todo' },
-    { title: 'Create data from API', path: '/tranformdata' }
+    { title: 'Create data from API', path: '/transformdata' }
   ]
   const router = useRouter() 
 
