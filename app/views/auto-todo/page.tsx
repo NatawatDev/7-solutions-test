@@ -45,22 +45,21 @@ const AutoTodoPage = () => {
   }
 
   return (
-    <div className='container m-auto w-full h-full flex gap-6'> 
-      <div className='flex flex-col w-[50%]'>
+    <div className='m-auto px-60 w-full h-full flex gap-6'> 
+      <div className='flex flex-col w-[40%] h-full'>
         <ItemColumn dataList={selectedItems.filter((item) => !item.isSelected)} action={handleSelect} />
       </div>
-      <div className='w-full h-full flex gap-2'>
-        <div className='w-full flex flex-col text-center border-2 border-[#efeeef]'>
+      <div className='w-full flex gap-2'>
+        <div className='w-full flex flex-col text-center border-2 border-[#efeeef] h-full'>
           <p className='font-bold w-full bg-[#eef2f3] py-1'>Fruit</p>         
           <ItemColumn dataList={selectedItems.filter((item) => item.type === 'Fruit' && item.isSelected)} action={(item) => handleClick(item, false)} />                                            
         </div>
         
-        <div className='w-full flex flex-col text-center border-2 border-[#efeeef]'>
+        <div className='w-full flex flex-col text-center border-2 border-[#efeeef] h-full'>
           <p className='font-bold bg-[#eef2f3] py-1'>Vegeteble</p>
           <ItemColumn dataList={selectedItems.filter((item) => item.type === 'Vegetable' && item.isSelected)} action={(item) => handleClick(item, false)} />                       
         </div>
-      </div>
-    
+      </div>    
     </div>
   )
 }
