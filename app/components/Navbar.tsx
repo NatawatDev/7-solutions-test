@@ -8,8 +8,7 @@ import { useRouter  } from "next/navigation";
 const Navbar = () => {
   const taskButton: TaskButton[] = [
     { title: 'Auto Delete Todo List', path: '/views/auto-todo' },
-    { title: 'Create data from API', path: '/views/transformdata' },
-    { title: 'Back to home', path: '/' }
+    { title: 'Create data from API', path: '/views/transformdata' }
   ]
   const router = useRouter() 
 
