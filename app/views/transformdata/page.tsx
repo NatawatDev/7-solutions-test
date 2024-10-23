@@ -21,9 +21,8 @@ const Transformdata = () => {
     fetchUserData()
   }, [])
 
-
   return (
-    <div>
+    <div className='mx-20 mb-8'>
       {Object.keys(userData).length > 0 && (
         <pre>{JSON.stringify(userData, null, 2)}</pre>
       )}      
