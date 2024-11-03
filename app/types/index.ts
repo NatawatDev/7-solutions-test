@@ -15,8 +15,7 @@ export type TodoItems = {
 }
 
 export interface MapIdTodoItems extends TodoItems {
-  id: number,
-  isSelected: boolean
+  id: number
 }
 
 export type ItemColumnProps = {
